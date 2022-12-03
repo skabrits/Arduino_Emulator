@@ -8,7 +8,7 @@ set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-pthread")
 
 add_executable(Arduino_Emulator main_windows.cpp)
 
-target_link_libraries( test ${CMAKE_THREAD_LIBS_INIT} )
+target_link_libraries( Arduino_Emulator ${CMAKE_THREAD_LIBS_INIT} )
 
 # For linux OS uncomment following line and comment line above
 
