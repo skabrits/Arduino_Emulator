@@ -1,3 +1,0 @@
-C:/Users/sevak/CLionProjects/Arduino_Emulator/cmake-build-debug/CMakeFiles/Arduino_Emulator.dir
-C:/Users/sevak/CLionProjects/Arduino_Emulator/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/sevak/CLionProjects/Arduino_Emulator/cmake-build-debug/CMakeFiles/rebuild_cache.dir
