@@ -3,7 +3,7 @@ project(Arduino_Emulator)
 
 set(CMAKE_CXX_STANDARD 17)
 
-target_compile_options(Arduino_Emulator PRIVATE -pthread)
+# target_compile_options(Arduino_Emulator PRIVATE -pthread)
 
 add_executable(Arduino_Emulator main_windows.cpp)
 
