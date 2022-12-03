@@ -3,6 +3,12 @@ project(Arduino_Emulator)
 
 set(CMAKE_CXX_STANDARD 17)
 
+message(STATUS ${UNIX})
+message(STATUS ${MINGW})
+message(STATUS ${MSVC})
+message(STATUS ${WIN32})
+message(STATUS ${APPLE})
+
 find_package( Threads )
 set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-pthread")
 
