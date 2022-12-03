@@ -32,3 +32,10 @@ git checkout -b feature_name_branch
 ```
 git push -u origin feature_name_branch
 ```
+После этого делается pull request на merge feature_name_branch
+и main [в интерфейсе](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request) гитхаба.
+После этого можно удалить ветку в гитхабе (через интерфейс)
+и [локально](https://dillionmegida.com/p/delete-outdated-branches/#:~:text=look%20at%20them.-,git%20remote%20prune%20origin,branch%2Dafter%20merge%2Doperation.):
+```
+git fetch --prune
+```
