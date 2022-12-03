@@ -3,7 +3,7 @@ project(Arduino_Emulator)
 
 set(CMAKE_CXX_STANDARD 17)
 
-SET(GCC_COVERAGE_LINK_FLAGS "-lpthread")
+SET(GCC_COVERAGE_LINK_FLAGS "-pthread")
 
 add_executable(Arduino_Emulator main_windows.cpp)
 
