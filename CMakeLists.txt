@@ -3,6 +3,8 @@ project(Arduino_Emulator)
 
 set(CMAKE_CXX_STANDARD 17)
 
+SET(GCC_COVERAGE_LINK_FLAGS "-lpthread")
+
 add_executable(Arduino_Emulator main_windows.cpp)
 
 # For linux OS uncomment following line and comment line above
