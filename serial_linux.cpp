@@ -30,12 +30,10 @@ public:
         FD_SET(0, &fds);
 
         selectRetVal = select(sizeof(fds)*8, &fds, NULL, NULL, &timeout);
+        std::cout << selectRetVal << " a var" << std::endl;
         while (!std::cin.eof() && selectRetVal != 0 && selectRetVal != -1){
             char c;
             std::cin.get(c);
-            if (c == '\n'){
-                break;
-            }
             byte i = (unsigned int)(_rx_buffer_head + 1) % SERIAL_RX_BUFFER_SIZE;
 
             // if we should be storing the received character into the location
@@ -46,6 +44,9 @@ public:
                 _rx_buffer[_rx_buffer_head] = c;
                 _rx_buffer_head = i;
             } else {
+                break;
+            }
+            if (c == '\n'){
                 break;
             }
         }
