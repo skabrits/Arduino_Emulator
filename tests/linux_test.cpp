@@ -6,7 +6,7 @@
 #include "../the_string.cpp"
 
 void setup() {
-//    Serial.begin(9600);
+    Serial.begin(9600);
 }
 
 void loop() {
@@ -27,7 +27,7 @@ int main() {
 
     std::ofstream out("out_a.txt");
     std::streambuf *coutbuf = std::cout.rdbuf();
-//    std::cout.rdbuf(out.rdbuf());
+    std::cout.rdbuf(out.rdbuf());
 
     setup();
     for (int i = 0; i < 1000; i++) {

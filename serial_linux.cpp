@@ -30,7 +30,6 @@ public:
         FD_SET(0, &fds);
 
         selectRetVal = select(sizeof(fds)*8, &fds, NULL, NULL, &timeout);
-        std::cout << selectRetVal << " a var" << std::endl;
         while (!std::cin.eof() && selectRetVal != 0 && selectRetVal != -1){
             char c;
             std::cin.get(c);
