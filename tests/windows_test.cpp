@@ -26,10 +26,10 @@ void irq()
 
 int main() {
 
-    std::ifstream in("../../tests/in_a.txt");
+    std::ifstream in("in_a.txt");
     std::cin.rdbuf(in.rdbuf());
 
-    std::ofstream out("../../tests/out_a.txt");
+    std::ofstream out("out_a.txt");
     std::streambuf *coutbuf = std::cout.rdbuf();
     std::cout.rdbuf(out.rdbuf());
 
@@ -45,7 +45,7 @@ int main() {
     out.close();
 
     std::ifstream myfile;
-    myfile.open("../../tests/out_a.txt");
+    myfile.open("out_a.txt");
 
     std::string output;
 
