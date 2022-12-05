@@ -19,6 +19,12 @@ else()
     add_executable(Arduino_Emulator main_linux.cpp)
 endif ()
 
-# For testing pieces of code uncomment following line and comment lines above
+enable_testing()
+
+add_subdirectory(tests)
+
+
+
+# For testing small pieces of code uncomment following line and comment lines above
 
 #add_executable(Arduino_Emulator test.cpp)
