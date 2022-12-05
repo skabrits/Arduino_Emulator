@@ -16,7 +16,7 @@ if (MINGW OR WIN32)
 
     target_link_libraries( Arduino_Emulator ${CMAKE_THREAD_LIBS_INIT} )
 else()
-    add_executable(Arduino_Emulator main_linux.cpp tests/test.cpp)
+    add_executable(Arduino_Emulator main_linux.cpp)
 endif ()
 
 enable_testing()
