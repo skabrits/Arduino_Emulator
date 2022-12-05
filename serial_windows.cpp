@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <atomic>
 #include "constants_and_types.cpp"
 
 class SerialExample{

@@ -1,21 +1,19 @@
 # Arduino_Emulator
 C++ emulator for Arduino
 ## Setup
-В файле [CMakeLists.txt](./CMakeLists.txt) нужно в зависимости
-от os на которой билдится из 2-х строчек 
-выбрать правильную:
+В файле [CMakeLists.txt](./CMakeLists.txt) в зависимость от системы 
+автоматически выбирается либо multithread version либо версия без потоков:
 ```
-add_executable(Arduino_Emulator main_windows.cpp)
+if (MINGW OR WIN32)
+    find_package( Threads )
+    set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-pthread")
 
-# For linux OS uncomment following line and comment line above
+    add_executable(Arduino_Emulator main_windows.cpp)
 
-#add_executable(Arduino_Emulator main_linux.cpp)
-
-# For testing pieces of code uncomment following line and comment lines above
-
-#add_executable(Arduino_Emulator test.cpp) 
-# This allows to run instead of file main_windows.cpp 
-# run file test.cpp, usefull to test small features
+    target_link_libraries( Arduino_Emulator ${CMAKE_THREAD_LIBS_INIT} )
+else()
+    add_executable(Arduino_Emulator main_linux.cpp)
+endif ()
 ```
 Это связано с тем, что stepik не поддерживает многопоточность, но код там
 выполняется в среде Linux ?alpine?, а на винде, та команда которую я нашёл
